@@ -9,11 +9,13 @@
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
     background-color: #000000;
+    position: relative;
 }
 
 .toggle-scene {
@@ -91,4 +93,24 @@ body {
 
 .switch.on .switch__button {
     top: 40px;
+}
+
+/* Footer Styles */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    font-size: 14px;
+}
+
+/* Responsive Footer */
+@media (max-width: 600px) {
+    footer {
+        font-size: 12px;
+        padding: 8px 0;
+    }
 }
