@@ -1,0 +1,94 @@
+:root {
+    --cord: #555;
+    --bulb-off: #444;
+    --bulb-on: #ffdd00;
+    --switch-off: #777;
+    --switch-on: #4CAF50;
+    --metal: #aaa;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000000;
+}
+
+.toggle-scene {
+    position: relative;
+    width: 120px;
+    height: 300px;
+}
+
+.toggle-scene__cord {
+    position: absolute;
+    width: 4px;
+    height: 150px;
+    background-color: var(--cord);
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bulb {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: var(--bulb-off);
+    border-radius: 50%;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.bulb.on {
+    background-color: var(--bulb-on);
+    box-shadow: 0 0 30px rgba(255, 221, 0, 0.8);
+}
+
+.filament {
+    position: absolute;
+    width: 4px;
+    height: 20px;
+    background-color: var(--metal);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.switch {
+    position: absolute;
+    width: 40px;
+    height: 80px;
+    background-color: var(--switch-off);
+    border-radius: 20px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.switch.on {
+    background-color: var(--switch-on);
+}
+
+.switch__button {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    background-color: var(--metal);
+    border-radius: 50%;
+    top: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: top 0.3s;
+}
+
+.switch.on .switch__button {
+    top: 40px;
+}
